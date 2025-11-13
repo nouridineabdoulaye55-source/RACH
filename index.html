@@ -15,8 +15,7 @@
         background-image: url(image/l.webp);
         background-repeat: no-repeat;
         background-size: cover;
-        background-attachment: scroll;
-        background-position: center;
+        background-attachment: fixed;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.6;
         color: #333;
@@ -305,12 +304,6 @@
 
       /* Media Queries pour Mobile */
       @media (max-width: 768px) {
-        body {
-          background-attachment: scroll;
-          background-size: cover;
-          background-position: center top;
-        }
-
         nav {
           flex-direction: column;
           gap: 1rem;
@@ -406,11 +399,6 @@
       }
 
       @media (max-width: 480px) {
-        body {
-          background-size: cover;
-          background-position: center;
-        }
-
         .fit h1 {
           font-size: 0.9rem;
         }
