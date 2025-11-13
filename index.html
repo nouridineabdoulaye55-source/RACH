@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ÉlectroTech Pro - Électricité Bâtiment</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-image: url(image/l.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      header {
+        color: white;
+        padding: 2rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo::before {
+        content: "⚡";
+        font-size: 2rem;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #ffd700;
+      }
+
+      .hero {
+        color: white;
+        text-align: center;
+        padding: 6rem 2rem;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #ffd700;
+        color: #1e3c72;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        background-color: #f8f9fa;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #1e3c72;
+        position: relative;
+        padding-bottom: 1rem;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(90deg, #ffd700, #1e3c72);
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .service-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .service-card h3 {
+        color: #1e3c72;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .bio-section {
+        background: #f8f9fa;
+      }
+
+      .bio-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 3rem;
+        align-items: start;
+      }
+
+      .bio-image {
+        text-align: center;
+      }
+
+      .bio-image-placeholder {
+        width: 250px;
+        height: 250px;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        color: white;
+        margin: 0 auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .bio-text h3 {
+        color: #1e3c72;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      div.fit img {
+        width: 50px;
+        border-radius: 80%;
+        object-fit: contain;
+      }
+      div.fit h1 {
+        font-size: 30px;
+      }
+      div.fit {
+        display: flex;
+        gap: 3px;
+      }
+      .bio-text h4 {
+        color: #666;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        font-weight: normal;
+      }
+
+      .bio-text p {
+        margin-bottom: 1.5rem;
+        text-align: justify;
+        color: #555;
+        line-height: 1.8;
+      }
+
+      .certifications {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        margin-top: 2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .certifications h4 {
+        color: #1e3c72;
+        margin-bottom: 1rem;
+      }
+
+      .certifications ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .certifications li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .certifications li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #ffd700;
+        font-weight: bold;
+      }
+
+      .contact {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+      }
+      div.ji {
+        background-color: blueviolet;
+      }
+      div.ji p {
+        color: white;
+      }
+      div.ji h2 {
+        color: white;
+      }
+      div.ji h3 {
+        color: white;
+      }
+      div.ji h4 {
+        color: white;
+      }
+
+      .contact-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .contact-item {
+        padding: 2rem;
+      }
+
+      .contact-item-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      footer {
+        background: #1a2f5a;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .bio-content {
+          grid-template-columns: 1fr;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+      div.pi img {
+        width: 100%;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="fit">
+          <div><img src="image/télécharger (4).webp" alt="" /></div>
+          <h1>ÉlectroTech pro <br />OURO-GOUNI</h1>
+        </div>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#biographie">Biographie</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero" id="accueil">
+      <h1>Votre Expert en Électricité Bâtiment</h1>
+      <p>Installation • Rénovation • Dépannage • Mise aux normes</p>
+      <a href="#contact" class="btn">Demander un Devis Gratuit</a>
+    </section>
+
+    <section class="container" id="services">
+      <h2 class="section-title">Nos Services</h2>
+      <div class="services">
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Installation Électrique</h3>
+          <p>
+            Installation complète pour construction neuve et rénovation.
+            Tableaux électriques, prises, interrupteurs et éclairages.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Mise aux Normes</h3>
+          <p>
+            Diagnostic et mise en conformité de vos installations selon les
+            normes NF C 15-100. Sécurité garantie.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Dépannage Urgent</h3>
+          <p>
+            Intervention rapide 7j/7 pour tous vos problèmes électriques.
+            Recherche de panne et réparation immédiate.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💡</div>
+          <h3>Éclairage LED</h3>
+          <p>
+            Installation d'éclairages LED économiques et écologiques. Conseil en
+            optimisation énergétique.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Électricité Tertiaire</h3>
+          <p>
+            Solutions pour commerces, bureaux et locaux professionnels. Câblage
+            informatique et téléphonique.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔌</div>
+          <h3>Domotique</h3>
+          <p>
+            Installation de systèmes domotiques pour automatiser votre habitat.
+            Confort et économies d'énergie.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bio-section" id="biographie">
+      <div class="container">
+        <div class="ji">
+          <h2 class="section-title">Biographie</h2>
+          <div class="bio-content">
+            <div class="bio-image">
+              <div class="pi">
+                <img src="image/télécharger (5).webp" alt="" />
+              </div>
+            </div>
+            <div class="bio-text">
+              <h3>OURO-GOUNI rachad</h3>
+              <h4>Électricien Qualifié - 20 ans d'expérience</h4>
+
+              <p>
+                Passionné par l'électricité depuis mon plus jeune âge, j'ai
+                débuté ma carrière en 2005 après l'obtention de mon CAP et BEP
+                Électrotechnique. J'ai ensuite complété ma formation avec un Bac
+                Pro ELEEC (Électrotechnique, Énergie, Équipements Communicants)
+                pour approfondir mes compétences techniques.
+              </p>
+
+              <p>
+                Pendant 10 ans, j'ai travaillé au sein de grandes entreprises du
+                bâtiment, participant à des projets d'envergure tels que la
+                construction de complexes résidentiels, de centres commerciaux
+                et de bureaux. Cette expérience m'a permis de maîtriser tous les
+                aspects de l'électricité du bâtiment, des installations les plus
+                simples aux systèmes les plus complexes.
+              </p>
+
+              <p>
+                En 2015, j'ai décidé de créer ma propre entreprise, ÉlectroTech
+                Pro, pour offrir un service personnalisé et de qualité aux
+                particuliers et professionnels de la région. Ma philosophie :
+                allier expertise technique, respect des normes de sécurité et
+                satisfaction client.
+              </p>
+
+              <p>
+                Aujourd'hui, je dirige une équipe de 5 électriciens qualifiés et
+                nous intervenons sur plus de 200 chantiers par an. Nous sommes
+                fiers de notre taux de satisfaction client de 98% et de notre
+                engagement pour l'excellence.
+              </p>
+            </div>
+            <div class="certifications">
+              <h4>Qualifications & Certifications</h4>
+              <ul>
+                <li>CAP/BEP Électrotechnique</li>
+                <li>Bac Pro ELEEC</li>
+                <li>Habilitation électrique B1, B2, BR, BC</li>
+                <li>Certification Qualifelec</li>
+                <li>RGE (Reconnu Garant de l'Environnement)</li>
+                <li>Formation continue NF C 15-100</li>
+                <li>Certification KNX pour la domotique</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container" style="background-color: #ffd700">
+        <h2 class="section-title" style="color: blue">Contactez-nous</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <h1>telephone</h1>
+            <a href="https://wa.me/93356876">Contacter sur WhatsApp</a>
+
+            <p>Disponible 7j/7</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <a href=""><h3>Email</h3></a>
+            <a href="mailto:adresse@example.com">Envoyer un email</a>
+
+            <p>Réponse sous 24h</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <h3>Adresse</h3>
+            <p>agens</p>
+            <p>togo, Tablibgo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Entreprise certifiée Qualifelec et RGE</p>
+    </footer>
+  </body>
+</html>
