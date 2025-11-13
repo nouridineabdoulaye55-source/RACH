@@ -16,7 +16,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.6;
         color: #333;
@@ -24,7 +23,7 @@
 
       header {
         color: white;
-        padding: 2rem 0;
+        padding: 1rem 0;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
 
@@ -34,26 +33,33 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 2rem;
+        padding: 0 1rem;
+        flex-wrap: wrap;
       }
 
-      .logo {
-        font-size: 1.8rem;
-        font-weight: bold;
+      .fit {
         display: flex;
         align-items: center;
         gap: 10px;
       }
 
-      .logo::before {
-        content: "⚡";
-        font-size: 2rem;
+      .fit img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .fit h1 {
+        font-size: 1.2rem;
+        line-height: 1.2;
       }
 
       nav ul {
         list-style: none;
         display: flex;
-        gap: 2rem;
+        gap: 1.5rem;
+        flex-wrap: wrap;
       }
 
       nav a {
@@ -61,6 +67,7 @@
         text-decoration: none;
         transition: color 0.3s;
         font-weight: 500;
+        font-size: 0.95rem;
       }
 
       nav a:hover {
@@ -70,17 +77,17 @@
       .hero {
         color: white;
         text-align: center;
-        padding: 6rem 2rem;
+        padding: 4rem 1.5rem;
       }
 
       .hero h1 {
-        font-size: 3rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
 
       .hero p {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin-bottom: 2rem;
       }
 
@@ -103,14 +110,14 @@
       .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 4rem 2rem;
+        padding: 3rem 1.5rem;
         background-color: #f8f9fa;
       }
 
       .section-title {
         text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 3rem;
+        font-size: 2rem;
+        margin-bottom: 2rem;
         color: #1e3c72;
         position: relative;
         padding-bottom: 1rem;
@@ -129,14 +136,14 @@
 
       .services {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
       }
 
       .service-card {
         background: white;
-        padding: 2rem;
+        padding: 1.5rem;
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s, box-shadow 0.3s;
@@ -156,72 +163,66 @@
       .service-card h3 {
         color: #1e3c72;
         margin-bottom: 1rem;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
 
       .bio-section {
         background: #f8f9fa;
       }
 
+      .ji {
+        background-color: blueviolet;
+        padding: 2rem 1rem;
+        border-radius: 10px;
+      }
+
+      .ji p,
+      .ji h2,
+      .ji h3,
+      .ji h4 {
+        color: white;
+      }
+
       .bio-content {
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 3rem;
-        align-items: start;
+        grid-template-columns: 1fr;
+        gap: 2rem;
       }
 
       .bio-image {
         text-align: center;
       }
 
-      .bio-image-placeholder {
-        width: 250px;
-        height: 250px;
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 5rem;
-        color: white;
-        margin: 0 auto;
+      .pi img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 20px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       }
 
       .bio-text h3 {
-        color: #1e3c72;
-        font-size: 2rem;
+        color: white;
+        font-size: 1.8rem;
         margin-bottom: 0.5rem;
       }
-      div.fit img {
-        width: 50px;
-        border-radius: 80%;
-        object-fit: contain;
-      }
-      div.fit h1 {
-        font-size: 30px;
-      }
-      div.fit {
-        display: flex;
-        gap: 3px;
-      }
+
       .bio-text h4 {
-        color: #666;
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
+        color: #ddd;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
         font-weight: normal;
       }
 
       .bio-text p {
         margin-bottom: 1.5rem;
         text-align: justify;
-        color: #555;
+        color: white;
         line-height: 1.8;
       }
 
       .certifications {
         background: white;
-        padding: 2rem;
+        padding: 1.5rem;
         border-radius: 10px;
         margin-top: 2rem;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -241,6 +242,7 @@
         padding: 0.5rem 0;
         padding-left: 1.5rem;
         position: relative;
+        color: #333;
       }
 
       .certifications li::before {
@@ -255,20 +257,9 @@
         background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
         color: white;
       }
-      div.ji {
-        background-color: blueviolet;
-      }
-      div.ji p {
-        color: white;
-      }
-      div.ji h2 {
-        color: white;
-      }
-      div.ji h3 {
-        color: white;
-      }
-      div.ji h4 {
-        color: white;
+
+      .contact .container {
+        background-color: #ffd700;
       }
 
       .contact-info {
@@ -279,7 +270,7 @@
       }
 
       .contact-item {
-        padding: 2rem;
+        padding: 1.5rem;
       }
 
       .contact-item-icon {
@@ -287,34 +278,154 @@
         margin-bottom: 1rem;
       }
 
+      .contact-item h1,
+      .contact-item h3 {
+        color: #1e3c72;
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-item a {
+        color: #1e3c72;
+        text-decoration: underline;
+        font-weight: 500;
+      }
+
+      .contact-item p {
+        color: #333;
+        margin-top: 0.5rem;
+      }
+
       footer {
         background: #1a2f5a;
         color: white;
         text-align: center;
-        padding: 2rem;
+        padding: 2rem 1rem;
       }
 
+      /* Media Queries pour Mobile */
       @media (max-width: 768px) {
-        nav ul {
+        nav {
           flex-direction: column;
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        nav ul {
+          justify-content: center;
           gap: 1rem;
         }
 
+        .fit h1 {
+          font-size: 1rem;
+        }
+
+        .fit img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .hero {
+          padding: 3rem 1rem;
+        }
+
         .hero h1 {
-          font-size: 2rem;
+          font-size: 1.5rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .btn {
+          padding: 0.8rem 1.5rem;
+          font-size: 0.9rem;
+        }
+
+        .container {
+          padding: 2rem 1rem;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+
+        .services {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .service-card {
+          padding: 1.5rem;
+        }
+
+        .service-icon {
+          font-size: 2.5rem;
         }
 
         .bio-content {
           grid-template-columns: 1fr;
+          gap: 1.5rem;
         }
 
-        .section-title {
+        .bio-text h3 {
+          font-size: 1.5rem;
+        }
+
+        .bio-text h4 {
+          font-size: 1rem;
+        }
+
+        .bio-text p {
+          font-size: 0.95rem;
+          text-align: left;
+        }
+
+        .ji {
+          padding: 1.5rem 1rem;
+        }
+
+        .contact-info {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .contact-item {
+          padding: 1rem;
+        }
+
+        .contact-item-icon {
           font-size: 2rem;
         }
       }
-      div.pi img {
-        width: 100%;
-        border-radius: 20px;
+
+      @media (max-width: 480px) {
+        .fit h1 {
+          font-size: 0.9rem;
+        }
+
+        nav a {
+          font-size: 0.85rem;
+        }
+
+        .hero h1 {
+          font-size: 1.3rem;
+        }
+
+        .hero p {
+          font-size: 0.9rem;
+        }
+
+        .section-title {
+          font-size: 1.3rem;
+        }
+
+        .service-card h3 {
+          font-size: 1.1rem;
+        }
+
+        .service-card p {
+          font-size: 0.9rem;
+        }
       }
     </style>
   </head>
@@ -322,7 +433,9 @@
     <header>
       <nav>
         <div class="fit">
-          <div><img src="image/télécharger (4).webp" alt="" /></div>
+          <div>
+            <img src="image/télécharger (4).webp" alt="Logo ÉlectroTech Pro" />
+          </div>
           <h1>ÉlectroTech pro <br />OURO-GOUNI</h1>
         </div>
         <ul>
@@ -401,7 +514,7 @@
           <div class="bio-content">
             <div class="bio-image">
               <div class="pi">
-                <img src="image/télécharger (5).webp" alt="" />
+                <img src="image/télécharger (5).webp" alt="OURO-GOUNI rachad" />
               </div>
             </div>
             <div class="bio-text">
@@ -458,28 +571,26 @@
     </section>
 
     <section class="contact" id="contact">
-      <div class="container" style="background-color: #ffd700">
+      <div class="container">
         <h2 class="section-title" style="color: blue">Contactez-nous</h2>
         <div class="contact-info">
           <div class="contact-item">
             <div class="contact-item-icon">📞</div>
-            <h1>telephone</h1>
+            <h1>Téléphone</h1>
             <a href="https://wa.me/93356876">Contacter sur WhatsApp</a>
-
             <p>Disponible 7j/7</p>
           </div>
           <div class="contact-item">
             <div class="contact-item-icon">📧</div>
-            <a href=""><h3>Email</h3></a>
+            <h3>Email</h3>
             <a href="mailto:adresse@example.com">Envoyer un email</a>
-
             <p>Réponse sous 24h</p>
           </div>
           <div class="contact-item">
             <div class="contact-item-icon">📍</div>
             <h3>Adresse</h3>
-            <p>agens</p>
-            <p>togo, Tablibgo</p>
+            <p>Agenrs</p>
+            <p>Togo, Tabligbo</p>
           </div>
         </div>
       </div>
